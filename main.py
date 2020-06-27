@@ -44,6 +44,56 @@ nine_btn.grid(row=2,column=2)
 divide_btn = Button(root, text ="/",width=10,font=text_font,command = clear_screen)
 divide_btn.grid(row=2,column=3)
 
+# Four button
+four_btn = Button(root, text ="4",width=10,font=text_font,command = clear_screen)
+four_btn.grid(row=3,column=0)
+
+# Five button
+five_btn = Button(root, text ="5",width=10,font=text_font,command = clear_screen)
+five_btn.grid(row=3,column=1)
+
+# Six button
+six_btn = Button(root, text ="6",width=10,font=text_font,command = clear_screen)
+six_btn.grid(row=3,column=2)
+
+# Mul button
+mul_btn = Button(root, text ="*",width=10,font=text_font,command = clear_screen)
+mul_btn.grid(row=3,column=3)
+
+# One button
+one_btn = Button(root, text ="1",width=10,font=text_font,command = clear_screen)
+one_btn.grid(row=4,column=0)
+
+# Two button
+two_btn = Button(root, text ="2",width=10,font=text_font,command = clear_screen)
+two_btn.grid(row=4,column=1)
+
+# Three button
+three_btn = Button(root, text ="3",width=10,font=text_font,command = clear_screen)
+three_btn.grid(row=4,column=2)
+
+# Minus button
+minus_btn = Button(root, text ="-",width=10,font=text_font,command = clear_screen)
+minus_btn.grid(row=4,column=3)
+
+# Dot button
+dot_btn = Button(root, text =".",width=10,font=text_font,command = clear_screen)
+dot_btn.grid(row=5,column=0)
+
+# Zero button
+zero_btn = Button(root, text ="0",width=10,font=text_font,command = clear_screen)
+zero_btn.grid(row=5,column=1)
+
+# Equal button
+equal_btn = Button(root, text ="=",width=10,font=text_font,command = clear_screen)
+equal_btn.grid(row=5,column=2)
+
+# Plus button
+plus_btn = Button(root, text ="+",width=10,font=text_font,command = clear_screen)
+plus_btn.grid(row=5,column=3)
+
+
+
 
 
 
