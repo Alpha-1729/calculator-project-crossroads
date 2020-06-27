@@ -8,19 +8,13 @@ from tkinter import font as tkFont
 screen_width=730
 screen_height=355
 
-# Variable to store the data on the display.
-global word
-word=""
 
 # Function for clearing the screen.
 def clear_screen():
-    global word
-    word=""
     display.set("")
 
 # Function for displaying entered data on screen.
 def print_data(key):
-    global word
     if display.get()=="ERROR":
         display.set("")    
     word=display.get()+key
@@ -28,7 +22,6 @@ def print_data(key):
 
 # Function for showing answer, when = is pressed
 def get_ans():
-    global word
     # Check errors in expression entered
     try:
         word=eval(display.get())
@@ -36,7 +29,6 @@ def get_ans():
     except:
         word="ERROR"
         display.set(word)
-        word=""
     
 
 root=Tk()
