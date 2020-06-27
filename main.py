@@ -21,7 +21,9 @@ def clear_screen():
 # Function for displaying entered data on screen.
 def print_data(key):
     global word
-    word+=key
+    if display.get()=="ERROR":
+        display.set("")    
+    word=display.get()+key
     display.set(word)
 
 # Function for showing answer, when = is pressed
@@ -29,11 +31,13 @@ def get_ans():
     global word
     # Check errors in expression entered
     try:
-        word=eval(word)
+        word=eval(display.get())
+        display.set(word)
     except:
         word="ERROR"
-    display.set(word)
-    word=""
+        display.set(word)
+        word=""
+    
 
 root=Tk()
 root.geometry("{}x{}".format(screen_width,screen_height)) # Setting the geometry.
