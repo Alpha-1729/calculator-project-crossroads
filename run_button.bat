@@ -1,2 +1,2 @@
-python make_button.py
+python run_button.py
 pause
