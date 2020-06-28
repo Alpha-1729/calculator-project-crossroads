@@ -40,7 +40,7 @@ text_font = tkFont.Font(family='Helvetica', size=20, weight=tkFont.BOLD)
 
 # Adding the display area
 display = StringVar()
-display_area=Entry(root, width=46,bd=20,textvariable=display,font=text_font,bg="powder blue")
+display_area=Entry(root, width=46,bd=20,textvariable=display,justify="right",font=text_font,bg="powder blue")
 display_area.grid(row=0,column=0,columnspan=4)
 
 # Clear button
