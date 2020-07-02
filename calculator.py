@@ -34,6 +34,7 @@ def get_ans():
 root=Tk()
 root.geometry("{}x{}".format(screen_width,screen_height)) # Setting the geometry.
 root.title("Simple Calculator")
+root.resizable(0,0) # Setting a fixed size for calculator.
 
 # Setting the font.
 text_font = tkFont.Font(family='Helvetica', size=20, weight=tkFont.BOLD)
@@ -44,8 +45,8 @@ display_area=Entry(root, width=46,bd=20,textvariable=display,justify="right",fon
 display_area.grid(row=0,column=0,columnspan=4)
 
 # Clear button
-clr_btn = Button(root, text ="CLEAR",width=42,font=text_font,bg="darkOrchid1",command = clear_screen)
-clr_btn.grid(row=1,column=0,sticky = W,columnspan=4)
+clr_btn = Button(root, text ="CLEAR",width=43,font=text_font,bg="darkOrchid1",command = clear_screen)
+clr_btn.grid(row=1,column=0,padx=2,sticky = W,columnspan=4)
 
 # Seven button
 seven_btn = Button(root, text ="7",width=10,font=text_font,bg="black",fg="white",command =lambda: print_data("7"))
