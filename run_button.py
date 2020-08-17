@@ -1,17 +1,29 @@
+#!usr/bin/python3
+# Code for creating a button for running the python script.
+
+"""
+NOTE:
+>>>>font, height and width parameter work for tkinter Button and not for ttk Button.
+"""
 import os
 from tkinter import *
 from tkinter import ttk
-def make_file():
-    os.startfile("run.bat")
-root=Tk()
-root.geometry('30x30+{}+{}'.format(+1300,+550))
-#root.title("")
-button=Button(root,text="R",font=('Arial Bold', '12'),command=make_file) #font,height,width parameter work for tkinter Button and not for ttk Button
-button.pack()
+
+
+def run_file():
+    os.startfile("run_file.bat")
+
+
+root = Tk()
+root.geometry('30x30+{}+{}'.format(+1300, +550))
+
+run_button = Button(root, text="R", bg="orange", font=(
+    'Arial Bold', '12'), command=run_file)
+run_button.pack()
 root.update()
-#create the gui window above all other apps
+
+# Create the gui window above all other apps.
 root.attributes("-topmost", True)
-root.overrideredirect(True)
-root.lift()
-#root.destroy()
+root.overrideredirect(True)     # Removing the x button in window.
+root.lift()    # Bring tk window to front.
 root.mainloop()
